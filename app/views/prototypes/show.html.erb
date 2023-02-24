@@ -9,7 +9,6 @@
           <%= @prototype.user.name %>
         </a>
       </span>
-      <%# <%= link_to "by #{@prototype.user.name}さん", root_path, class: :prototype__user %>
       <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
       <% if user_signed_in? && current_user.id == @prototype.user_id %>
         <div class="prototype__manage">
@@ -60,7 +59,6 @@
                   <%= comment.user.name %>
                 </a>
               </span>
-              <%# <%= link_to comment.user.name, @prototype.user.name, class: :comment_user %>
             </li>
           <% end %>
           <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
